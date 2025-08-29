@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 bg-warning-subtle">
+    <h2 class="text-center text-dark">📜 Last 5 Calculations</h2>
+    <ul class="list-group list-group-flush">
+        {% for calc in history %}
+            <li class="list-group-item">{{ calc }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

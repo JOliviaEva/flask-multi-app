@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 bg-light">
+    <h2 class="text-center text-primary">💙 Feedback Form</h2>
+    {% if success %}
+        <div class="alert alert-success text-center">Thank you for your feedback!</div>
+    {% endif %}
+    <form method="POST">
+        <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+        <textarea name="message" class="form-control mb-3" placeholder="Your Feedback" required></textarea>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+</div>
+{% endblock %}

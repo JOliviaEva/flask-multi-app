@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 bg-info-subtle">
+    <h2 class="text-center text-dark">📩 Collected Feedback</h2>
+    {% for f in feedbacks %}
+        <div class="card my-3 p-3">
+            <h5 class="text-primary">{{ f.name }}</h5>
+            <p><strong>Email:</strong> {{ f.email }}</p>
+            <p>{{ f.message }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

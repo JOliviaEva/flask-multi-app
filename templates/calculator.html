@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 bg-light">
+    <h2 class="text-center text-primary">🧮 Colorful Calculator</h2>
+    <form method="POST" class="text-center">
+        <div class="mb-3">
+            <input type="number" name="num1" class="form-control" placeholder="Enter first number" required>
+        </div>
+        <div class="mb-3">
+            <select name="operation" class="form-select">
+                <option value="add">➕ Add</option>
+                <option value="sub">➖ Subtract</option>
+                <option value="mul">✖ Multiply</option>
+                <option value="div">➗ Divide</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="number" name="num2" class="form-control" placeholder="Enter second number" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Calculate</button>
+    </form>
+    {% if result is not none %}
+        <div class="alert alert-info mt-3 text-center">
+            <h4>Result: {{ result }}</h4>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
